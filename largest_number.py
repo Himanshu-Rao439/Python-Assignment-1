@@ -1,15 +1,29 @@
 def largest_number(lst):
-    i = 0                 # index start
-    largest = lst[0]      # assume first number is largest
+    # Step 1: check if list is empty
+    if len(lst) == 0:
+        return "List is empty"
 
-    while i < len(lst):   # jab tak list khatam na ho
+    # Step 2: initialize index
+    i = 0
+
+    # Step 3: assume first element is the largest
+    largest = lst[0]
+
+    # Step 4: traverse the list using while loop
+    while i < len(lst):
         if lst[i] > largest:
-            largest = lst[i]
-        i += 1            # next index
+            largest = lst[i]   # update largest
+        i += 1                 # move to next index
 
+    # Step 5: return the largest number
     return largest
 
 
-numbers = [10, 45, 3, 99, 23]
-print(largest_number(numbers))
+# ----------- MAIN PROGRAM -----------
 
+numbers = [10, 45, 3, 99, 23]
+
+result = largest_number(numbers)
+
+print("List:", numbers)
+print("Largest number in the list is:", result)
