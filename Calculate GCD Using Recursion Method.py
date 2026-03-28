@@ -23,8 +23,8 @@ def GCD(a: int, b: int) -> int:
 
 # -----MAIN EXECUTION------
 if __name__ == "__main__":
-    a = "this"
-    b = "this"
+    a = 119
+    b = 544
     try:
         result = GCD(a, b)
         print("GCD is:", result)
